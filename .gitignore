@@ -3,11 +3,11 @@
 # ======================
 
 CNN/*
-YOLO/*
+YOLOv8/*
 ML/*
 
 !CNN/*.ipynb
-!YOLO/*.ipynb
+!YOLOv8/*.ipynb
 !ML/*.ipynb
 
 # ======================
@@ -21,6 +21,7 @@ ML/*
 
 data/
 dataset/
+
 
 # ======================
 # Python virtual environments
