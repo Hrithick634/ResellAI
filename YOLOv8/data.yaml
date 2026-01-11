@@ -1,0 +1,19 @@
+names:
+- phone_screen
+nc: 1
+roboflow:
+  license: CC BY 4.0
+  project: my-first-project-kuvol
+  url: https://universe.roboflow.com/ww-fc7lq/my-first-project-kuvol/dataset/1
+  version: 1
+  workspace: ww-fc7lq
+
+test: ../test/images
+train: ../train/images
+val: ../valid/images
+
+# test: /Users/hrithickkanagaraj/Documents/Programming /ML/Damage_classification/YOLOv8/test/images
+
+# train: /Users/hrithickkanagaraj/Documents/Programming /ML/Damage_classification/YOLOv8/train/images
+
+# val: /Users/hrithickkanagaraj/Documents/Programming /ML/Damage_classification/YOLOv8/valid

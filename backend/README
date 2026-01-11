@@ -1,0 +1,126 @@
+# ⚙️ Backend – Mobile Damage & Resale Estimation API
+
+This backend service provides a **FastAPI-based inference pipeline** that integrates **computer vision, deep learning, and machine learning models** to estimate smartphone resale value.
+
+---
+
+## 🚀 Key Responsibilities
+
+- Handle image uploads via REST API
+- Validate screen presence using YOLO
+- Classify damage severity using CNN (ResNet50)
+- Predict hardware-based depreciation
+- Compute final resale price using a pricing engine
+
+---
+
+## 🧠 ML Pipeline Overview
+
+Input Image + Specs
+|
+v
+YOLO → Screen Detection
+|
+v
+CNN → Damage Score (0–1)
+|
+v
+ML Model → Spec Depreciation
+|
+v
+Pricing Formula → Resale Value
+
+
+---
+
+## 🛠️ Tech Stack
+
+- **FastAPI** – REST API
+- **TensorFlow / Keras** – CNN inference
+- **YOLO (Ultralytics)** – Object detection
+- **NumPy / OpenCV** – Image processing
+- **Python 3.10**
+
+---
+
+## 📂 Backend Structure
+
+backend/
+│
+├── app/
+│ ├── main.py
+│ ├── routes/
+│ │ └── predict.py
+│ ├── services/
+│ │ ├── cnn_service.py
+│ │ ├── yolo_service.py
+│ │ ├── ml_service.py
+│ │ └── pricing_service.py
+│ ├── utils/
+│ │ ├── image_utils.py
+│ │ └── brand_utils.py
+│
+├── requirements.txt
+└── README.md
+
+
+---
+
+## 🔌 API Endpoint
+
+### `POST /predict`
+
+**Form Data**
+file → Phone image
+brand → Brand name
+ram → RAM (GB)
+storage → Storage (GB)
+phone_age → Age bucket
+mrp → Original price
+backbody → Yes / No
+
+
+**Response**
+```json
+{
+  "screen_detected": true,
+  "damage_class": "moderately_broken",
+  "damage_score": 0.63,
+  "spec_depreciation": 0.42,
+  "resale_value": 18400
+}
+
+
+## ⚡ Performance
+
+Single Image Inference: ~41.8 ms
+
+Batch Inference: ~162.5 ms
+
+Optimized for real-time usage
+
+
+## Run Backend Locally
+
+conda activate tf_env
+cd backend
+uvicorn app.main:app --reload
+
+
+## 📦 Required Packages
+pip install fastapi uvicorn tensorflow numpy opencv-python python-multipart ultralytics
+
+
+## 🔐 Notes
+
+CNN model loaded once at startup for performance
+
+NumPy pinned <2.0 for TensorFlow compatibility
+
+Designed for easy production deployment
+
+
+👤 Author
+
+Hrithick Kanagaraj
+AI | ML | Computer Vision Engineer

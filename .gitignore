@@ -1,0 +1,41 @@
+# ======================
+# Keep ONLY notebooks
+# ======================
+
+CNN/*
+YOLO/*
+ML/*
+
+!CNN/*.ipynb
+!YOLO/*.ipynb
+!ML/*.ipynb
+
+# ======================
+# Models & data
+# ======================
+
+*.h5
+*.pt
+*.pkl
+*.onnx
+
+data/
+dataset/
+
+# ======================
+# Python virtual environments
+# ======================
+venv/
+tf_venv/
+.env
+
+# ======================
+# Python cache
+# ======================
+__pycache__/
+*.pyc
+
+# ======================
+# OS
+# ======================
+.DS_Store
