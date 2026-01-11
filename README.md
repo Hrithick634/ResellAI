@@ -71,9 +71,34 @@ Damage_classification/
 ├── backend/ # FastAPI + ML services
 ├── CNN/ # Trained CNN models
 ├── YOLO/ # YOLO weights
-├── datasets/
+├── scripts
 └── README.md
 
+---
+
+📁 Models & Scripts Management
+
+Due to GitHub size limitations and best MLOps practices, trained models are not stored in this repository.
+
+All large trained models (CNN .h5, YOLO .pt, XGBoost .pkl) are securely stored on cloud storage (Google Drive).
+
+The scripts/ folder contains utility scripts to:
+
+Download required models from cloud storage
+
+Set up paths automatically for local inference and deployment
+
+This approach ensures:
+
+✅ Lightweight repository
+
+✅ Faster cloning
+
+✅ Reproducibility across environments
+
+📌 Note: Links to the model files and download instructions are provided inside the scripts/ folder.
+
+check out this for models: https://drive.google.com/drive/folders/1MgJN7gWRo-r5b5KqaM9I9rs5BMh9kOoo?usp=sharing
 
 ---
 
