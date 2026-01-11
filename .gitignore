@@ -21,6 +21,9 @@ ML/*
 
 data/
 dataset/
+YOLOv8/test
+YOLOv8/train
+YOLOv8/valid
 
 
 # ======================
